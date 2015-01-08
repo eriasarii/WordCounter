@@ -18,3 +18,10 @@ class FileManager:
         count += 1
 
         return count
+
+    def saveResult(self, name, listToSave):
+        file = open(name, "w")
+        for i in listToSave:
+            file.write(i[0] + " == ")
+            file.write(i[1].__str__() + "\n")
+        file.close()
